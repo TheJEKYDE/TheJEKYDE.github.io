@@ -78,7 +78,7 @@ p { margin: 0 0 1rem; max-width: 62ch; }
 .hero h1 { font-size: clamp(2.6rem, 8vw, 5.6rem); font-weight: 800; max-width: 14ch; }
 .hero p { margin-top: 1.5rem; font-size: 1.2rem; color: var(--muted); }
 
-.games { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1rem 0 4rem; }
+.games { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin: 1rem 0 4rem; }
 .game-tile {
   position: relative; overflow: hidden; text-decoration: none;
   border-radius: 28px; padding: 2rem; min-height: 420px;
@@ -88,7 +88,7 @@ p { margin: 0 0 1rem; max-width: 62ch; }
 .game-tile:hover { transform: translateY(-6px) rotate(-0.4deg); }
 .game-tile h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.5rem; }
 .game-tile p { margin: 0; max-width: 32ch; opacity: 0.85; }
-.game-tile .art { position: absolute; top: 1.5rem; right: 1.5rem; width: 46%; }
+.game-tile .art { position: absolute; top: 1.5rem; right: 1.5rem; width: 46%; max-width: 200px; }
 .tile-dice { background: #0e1a2c; color: #f1ede3; box-shadow: inset 0 0 0 1px rgba(241, 237, 227, 0.14); }
 .tile-gift { background: #6e0f1f; color: #fff3da; }
 .tile-tag { display: inline-block; margin-bottom: 1rem; font-weight: 600; font-size: 0.9rem; opacity: 0.85; }
@@ -173,3 +173,10 @@ html[lang="en"] [data-l="nl"], html[lang="nl"] [data-l="en"] { display: none !im
 .site-head nav { align-items: center; flex-wrap: wrap; }
 .bold { font-weight: 700; }
 .ticks.one { columns: 1; }
+
+body[data-game="asteroid-miner"] {
+  --bg: #14102a; --ink: #efe9ff; --muted: #a79fc4; --line: rgba(239, 233, 255, 0.16);
+  --accent: #ffb347; --on-accent: #14102a; --panel: #1f1a3d;
+}
+.tile-rock { background: #14102a; color: #efe9ff; box-shadow: inset 0 0 0 1px rgba(239, 233, 255, 0.14); }
+.badge { display: inline-block; border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 0.55rem 1.1rem; font-weight: 600; }
