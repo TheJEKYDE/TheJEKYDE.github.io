@@ -164,3 +164,12 @@ p { margin: 0 0 1rem; max-width: 62ch; }
 .note { background: var(--panel); border-radius: 16px; padding: 1rem 1.25rem; max-width: 62ch; margin-top: 1.5rem; }
 .prose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 @media (max-width: 760px) { .ticks { columns: 1; } .prose-grid { grid-template-columns: 1fr; gap: 0; } }
+
+/* language switch */
+html[lang="en"] [data-l="nl"], html[lang="nl"] [data-l="en"] { display: none !important; }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.lang button { background: transparent; color: var(--muted); border: 0; padding: 0.3rem 0.8rem; font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+.site-head nav { align-items: center; flex-wrap: wrap; }
+.bold { font-weight: 700; }
+.ticks.one { columns: 1; }

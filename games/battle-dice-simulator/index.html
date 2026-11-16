@@ -7,23 +7,27 @@
 <meta name="description" content="Battle Dice Simulator for Android.">
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
-<body data-game="battle-dice" data-root="../../">
+<body data-game="battle-dice" data-root="../../" data-title-en="Battle Dice Simulator | TheJEKYDE Games" data-title-nl="Battle Dice Simulator | TheJEKYDE Games">
 <div class="wrap">
 <header class="site-head">
   <a class="brand" href="../../">TheJEKYDE Games</a>
   <nav aria-label="Main">
     <a href="../../games/battle-dice-simulator/" aria-current="page">Battle Dice Simulator</a>
     <a href="../../games/pakjesfeest/">Pakjesfeest</a>
+    <span class="lang" role="group" aria-label="Taal / Language">
+      <button type="button" data-set-lang="nl">NL</button><button type="button" data-set-lang="en">EN</button>
+    </span>
   </nav>
 </header>
 <main>
 <section class="game-hero">
   <div>
     <h1>Battle Dice Simulator</h1>
-    <p class="lead">Beslis grote veldslagen in seconden. Battle Dice Simulator gooit elke aanval voor je, ronde na ronde, zodat je niet eindeloos hoeft te dobbelen en snel verder kunt met de wereld veroveren.</p>
+    <p class="lead" data-l="en">Settle big battles in seconds. Battle Dice Simulator rolls every attack for you, round after round, so you don't have to roll endlessly and can get back to conquering the world.</p>
+<p class="lead" data-l="nl">Beslis grote veldslagen in seconden. Battle Dice Simulator gooit elke aanval voor je, ronde na ronde, zodat je niet eindeloos hoeft te dobbelen en snel verder kunt met de wereld veroveren.</p>
     <div class="btn-row">
-      <a class="btn" href="https://play.google.com/store/apps/details?id=nl.ekkel.battledice">Download op Google Play</a>
-      <a class="btn ghost" href="https://claude.ai/artifact/3TAYs26y4qaaKiMrwv2VxE">Privacybeleid</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=nl.ekkel.battledice"><span data-l="en">Get it on Google Play</span><span data-l="nl">Download op Google Play</span></a>
+      <a class="btn ghost" href="https://claude.ai/artifact/3TAYs26y4qaaKiMrwv2VxE"><span data-l="en">Privacy policy</span><span data-l="nl">Privacybeleid</span></a>
     </div>
   </div>
   <div><svg class="art" viewBox="0 0 200 200" role="img" aria-label="Two dice">
@@ -35,14 +39,30 @@
 <section class="section prose">
   <div class="prose-grid">
     <div>
-      <h2>Zo werkt het</h2>
-      <p>Vul de legers van de aanvaller en de verdediger in, druk op START en zie de strijd zich ontvouwen. De aanvaller gooit maximaal 3 dobbelstenen, de verdediger maximaal 2, en elke ronde worden de hoogste worpen vergeleken – net als bij de klassieke veroveringsbordspellen.</p>
-      <p>Ideaal aan de speltafel: geen discussie meer over de dobbelstenen, geen tien minuten gooien – alleen de uitslag en de kansen.</p>
-      <p class="note">Gratis met advertenties. Liever zonder? Verwijder ze met één eenmalige aankoop.</p>
+      <h2><span data-l="en">How it works</span><span data-l="nl">Zo werkt het</span></h2>
+      <p data-l="en">Enter the armies of the attacker and the defender, press START and watch the battle unfold. The attacker rolls up to 3 dice, the defender up to 2, and each round the highest rolls are compared – just like in the classic conquest board games.</p>
+<p data-l="nl">Vul de legers van de aanvaller en de verdediger in, druk op START en zie de strijd zich ontvouwen. De aanvaller gooit maximaal 3 dobbelstenen, de verdediger maximaal 2, en elke ronde worden de hoogste worpen vergeleken – net als bij de klassieke veroveringsbordspellen.</p>
+      <p data-l="en">Perfect at the game table: no more arguing about the dice, no ten minutes of rolling – just the result and the odds.</p>
+<p data-l="nl">Ideaal aan de speltafel: geen discussie meer over de dobbelstenen, geen tien minuten gooien – alleen de uitslag en de kansen.</p>
+      <p class="note" data-l="en">Free with ads. Prefer none? Remove them with a single one-time purchase.</p>
+<p class="note" data-l="nl">Gratis met advertenties. Liever zonder? Verwijder ze met één eenmalige aankoop.</p>
     </div>
     <div>
-      <h2>Functies</h2>
-      <ul class="ticks" style="columns:1">
+      <h2><span data-l="en">Features</span><span data-l="nl">Functies</span></h2>
+      <ul class="ticks one" data-l="en">
+  <li>Fast battle simulation – from 2 to 200 armies per side</li>
+  <li>Live win odds for attacker and defender</li>
+  <li>AI advisor that tells you during the battle whether to press on or retreat</li>
+  <li>Chart showing how the armies shrink each round</li>
+  <li>Adjustable speed – watch every roll or jump straight to the result</li>
+  <li>Pause, resume and restart whenever you like</li>
+  <li>Give your territories their own names</li>
+  <li>Epic sounds: cannons, war drums and a victory fanfare (sound can be turned off)</li>
+  <li>Share your victory as an image with friends</li>
+  <li>Available in Dutch and English</li>
+  <li>Plays offline – no account needed</li>
+</ul>
+<ul class="ticks one" data-l="nl">
   <li>Snelle gevechtssimulatie – van 2 tot 200 legers per kant</li>
   <li>Live winkans voor aanvaller en verdediger</li>
   <li>AI-adviseur die tijdens het gevecht zegt of je moet doorzetten of terugtrekken</li>
@@ -63,11 +83,11 @@
   <div class="shots"><div class="shot">Screenshot 1</div><div class="shot">Screenshot 2</div><div class="shot">Screenshot 3</div></div>
 </section>
 <section class="section">
-  <h2>Nieuws en mijlpalen</h2>
+  <h2><span data-l="en">News and milestones</span><span data-l="nl">Nieuws en mijlpalen</span></h2>
   <ul class="feed" id="news-feed"></ul>
 </section>
 <section class="section">
-  <h2>In ontwikkeling</h2>
+  <h2><span data-l="en">Work in progress</span><span data-l="nl">In ontwikkeling</span></h2>
   <div class="wip" id="wip"></div>
 </section>
 </main>
