@@ -151,3 +151,16 @@ p { margin: 0 0 1rem; max-width: 62ch; }
   .tile-dice .art { animation: none; }
   .btn, .game-tile { transition: none; }
 }
+
+/* long-form game text */
+.prose h3 { margin: 2rem 0 0.75rem; }
+.prose h3:first-child { margin-top: 0; }
+.prose p { color: var(--ink); }
+.ticks { list-style: none; margin: 0 0 1.25rem; padding: 0; columns: 2; column-gap: 2.5rem; max-width: 900px; }
+.ticks li { break-inside: avoid; padding: 0.35rem 0 0.35rem 1.5rem; position: relative; }
+.ticks li::before { content: ""; position: absolute; left: 0; top: 0.95rem; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.ticks.plain li { padding-left: 0; }
+.ticks.plain li::before { display: none; }
+.note { background: var(--panel); border-radius: 16px; padding: 1rem 1.25rem; max-width: 62ch; margin-top: 1.5rem; }
+.prose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+@media (max-width: 760px) { .ticks { columns: 1; } .prose-grid { grid-template-columns: 1fr; gap: 0; } }
