@@ -180,3 +180,10 @@ body[data-game="asteroid-miner"] {
 }
 .tile-rock { background: #14102a; color: #efe9ff; box-shadow: inset 0 0 0 1px rgba(239, 233, 255, 0.14); }
 .badge { display: inline-block; border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 0.55rem 1.1rem; font-weight: 600; }
+
+/* screenshots with images */
+.shot-fig { margin: 0; }
+.shot-img { aspect-ratio: 9 / 16; border-radius: 22px; overflow: hidden; background: var(--panel); display: grid; place-items: center; }
+.shot-img img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.shot-img img.sprite { width: 70%; height: auto; }
+.shot-fig figcaption { margin-top: 0.6rem; color: var(--muted); font-size: 0.95rem; }
