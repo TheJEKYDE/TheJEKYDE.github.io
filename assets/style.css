@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #14161c;
+  --ink: #eceae4;
+  --muted: #9a9ca6;
+  --line: rgba(255, 255, 255, 0.12);
+  --accent: #ff6b4a;
+  --on-accent: #14161c;
+  --panel: #1d2029;
+  --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body[data-game="battle-dice"] {
+  --bg: #0e1a2c;
+  --ink: #f1ede3;
+  --muted: #9fb0c8;
+  --line: rgba(241, 237, 227, 0.16);
+  --accent: #ff4d4d;
+  --on-accent: #0e1a2c;
+  --panel: #16273f;
+}
+
+body[data-game="pakjesfeest"] {
+  --bg: #6e0f1f;
+  --ink: #fff3da;
+  --muted: #e9b9a6;
+  --line: rgba(255, 243, 218, 0.2);
+  --accent: #f4c24f;
+  --on-accent: #4a0914;
+  --panel: #861629;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+img, svg { max-width: 100%; display: block; }
+
+.wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+/* header */
+.site-head { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 0; gap: 1rem; flex-wrap: wrap; }
+.brand { font-family: var(--display); font-weight: 800; font-size: 1.25rem; text-decoration: none; letter-spacing: -0.01em; }
+.site-head nav { display: flex; gap: 1.5rem; }
+.site-head nav a { text-decoration: none; color: var(--muted); font-weight: 500; }
+.site-head nav a:hover, .site-head nav a[aria-current] { color: var(--ink); }
+
+h1, h2, h3 { font-family: var(--display); line-height: 1.05; margin: 0; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; margin-bottom: 1.5rem; }
+h3 { font-size: 1.25rem; font-weight: 700; }
+p { margin: 0 0 1rem; max-width: 62ch; }
+.muted { color: var(--muted); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: var(--accent); color: var(--on-accent);
+  font-weight: 600; text-decoration: none;
+  padding: 0.85rem 1.4rem; border-radius: 999px;
+  transition: transform 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+
+/* home hero */
+.hero { padding: 3rem 0 2.5rem; }
+.hero h1 { font-size: clamp(2.6rem, 8vw, 5.6rem); font-weight: 800; max-width: 14ch; }
+.hero p { margin-top: 1.5rem; font-size: 1.2rem; color: var(--muted); }
+
+.games { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1rem 0 4rem; }
+.game-tile {
+  position: relative; overflow: hidden; text-decoration: none;
+  border-radius: 28px; padding: 2rem; min-height: 420px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  transition: transform 0.25s ease;
+}
+.game-tile:hover { transform: translateY(-6px) rotate(-0.4deg); }
+.game-tile h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.5rem; }
+.game-tile p { margin: 0; max-width: 32ch; opacity: 0.85; }
+.game-tile .art { position: absolute; top: 1.5rem; right: 1.5rem; width: 46%; }
+.tile-dice { background: #0e1a2c; color: #f1ede3; box-shadow: inset 0 0 0 1px rgba(241, 237, 227, 0.14); }
+.tile-gift { background: #6e0f1f; color: #fff3da; }
+.tile-tag { display: inline-block; margin-bottom: 1rem; font-weight: 600; font-size: 0.9rem; opacity: 0.85; }
+
+/* news */
+.section { padding: 3rem 0; border-top: 1px solid var(--line); }
+.feed { list-style: none; margin: 0; padding: 0 0 0 1.5rem; border-left: 2px solid var(--line); display: grid; gap: 1.75rem; }
+.feed li { position: relative; }
+.feed li::before {
+  content: ""; position: absolute; left: calc(-1.5rem - 7px); top: 0.55rem;
+  width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent);
+}
+.feed li.milestone::before { background: var(--accent); width: 14px; height: 14px; left: calc(-1.5rem - 8px); }
+.feed time { color: var(--muted); font-size: 0.9rem; }
+.feed .meta { display: flex; gap: 0.75rem; align-items: baseline; flex-wrap: wrap; }
+.feed h3 { margin: 0.2rem 0 0.3rem; }
+.feed p { margin: 0; color: var(--muted); }
+.feed .from { font-size: 0.9rem; color: var(--accent); text-decoration: none; font-weight: 600; }
+.empty { color: var(--muted); }
+
+/* work in progress */
+.wip { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.wip-card { background: var(--panel); border-radius: 20px; padding: 1.4rem; }
+.wip-card p { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.98rem; }
+.chip { display: inline-block; font-size: 0.85rem; font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 999px; margin-bottom: 0.8rem; }
+.chip.building { background: var(--accent); color: var(--on-accent); }
+.chip.testing { background: transparent; border: 1px solid var(--accent); color: var(--accent); }
+.chip.planned { background: transparent; border: 1px dashed var(--muted); color: var(--muted); }
+
+/* game page */
+.game-hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; align-items: center; padding: 3rem 0 4rem; }
+.game-hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 800; }
+.game-hero .lead { font-size: 1.25rem; margin-top: 1.25rem; color: var(--muted); }
+.game-hero .art svg { width: 100%; height: auto; }
+
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.shot {
+  aspect-ratio: 9 / 16; border-radius: 22px; border: 2px dashed var(--line);
+  display: grid; place-items: center; text-align: center; color: var(--muted); padding: 1rem; font-size: 0.95rem;
+}
+
+.site-foot { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--muted); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.95rem; }
+.site-foot a { text-decoration: none; }
+.site-foot a:hover { color: var(--ink); text-decoration: underline; }
+
+/* one orchestrated moment: dice tumble on the home page */
+@keyframes tumble { from { transform: rotate(-24deg) translateY(-14px); } to { transform: rotate(0) translateY(0); } }
+.tile-dice .art { animation: tumble 0.9s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+
+@media (max-width: 760px) {
+  .games { grid-template-columns: 1fr; }
+  .game-tile { min-height: 340px; }
+  .game-hero { grid-template-columns: 1fr; gap: 2rem; }
+  .game-hero .art { order: -1; max-width: 240px; }
+  .shots { grid-template-columns: repeat(3, 70%); overflow-x: auto; padding-bottom: 0.5rem; scroll-snap-type: x mandatory; }
+  .shot { scroll-snap-align: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tile-dice .art { animation: none; }
+  .btn, .game-tile { transition: none; }
+}
